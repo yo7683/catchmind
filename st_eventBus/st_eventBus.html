@@ -1,0 +1,17 @@
+<!--
+ * @author : th.kim
+ * @date : 2024-06-12
+ * @description : 
+ * @target : 
+==============================================================
+ * Ver          Date            Author          Modification
+ * 1.0          2024-06-12      th.kim          Initial Version
+-->
+<!-- St Event Bus -->
+<template>
+    <div class="slds-grid slds-wrap slds-size_1-of-1 slds-m-around_medium">
+        <lightning-input variant="label-hidden" value={messageText} onchange={handleInputChange} onkeyup={handleKeyUp}></lightning-input>
+        <lightning-button label="Send" onclick={handleSendMessage}></lightning-button>
+    </div>
+</template>
+
