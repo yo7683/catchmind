@@ -1,0 +1,18 @@
+<!--
+ * @author : th.kim
+ * @date : 2024-06-19
+ * @description : 캐치마인드 그림 컴포넌트
+ * @target : st_chatSubscriber
+==============================================================
+ * Ver          Date            Author          Modification
+ * 1.0          2024-06-19      th.kim          Initial Version
+-->
+<!-- St Drawing -->
+<template>
+    <lightning-card title="Real-time Drawing">
+        <canvas class="drawing-board" width="800" height="600" onmousedown={startDrawing}
+                onmousemove={draw} onmouseup={stopDrawing} onmouseleave={stopDrawing} onmouseout={stopDrawing}></canvas>
+        <lightning-button label="Erase" onclick={erase}></lightning-button>
+        <lightning-button label="Publish" onclick={save}></lightning-button>
+    </lightning-card>
+</template>

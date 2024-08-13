@@ -1,0 +1,41 @@
+<!--
+ * @author : th.kim
+ * @date : 2024-06-12
+ * @description : 캐치마인드 메인 화면
+ * @target : App Page
+==============================================================
+ * Ver          Date            Author          Modification
+ * 1.0          2024-06-12      th.kim          Initial Version
+-->
+<!-- St Chat Subscriber -->
+<template>
+    <!-- 현재 접속 유저 컴포넌트 Start -->
+    <c-st_live-user></c-st_live-user>
+    <!-- 현재 접속 유저 컴포넌트 End -->
+
+    <!-- 전체 Wrap Start -->
+    <div class="slds-grid slds-wrap slds-size_1-of-1">
+        <div>
+            <!-- 그림 그리기 컴포넌트 Start -->
+            <c-st_drawing></c-st_drawing>
+            <!-- 그림 그리기 컴포넌트 End -->
+        </div>
+        <div>
+
+            <!-- 채팅 Card Start -->
+            <lightning-card title="Live Chat">
+                <div class="slds-m-around_medium">
+                    <div class="chat-window">
+                        <template for:each={messages} for:item="message">
+                            <p key={message.id}><strong>{message.sender}</strong>: {message.text}</p>
+                        </template>
+                    </div>
+                </div>
+                <c-st_event-bus></c-st_event-bus>
+            </lightning-card>
+            <!-- 채팅 Card End -->
+        </div>
+    </div>
+    <!-- 전체 Wrap End -->
+
+</template>

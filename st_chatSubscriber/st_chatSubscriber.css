@@ -1,0 +1,16 @@
+/*************************************************************
+ * @author : th.kim
+ * @date : 2024-06-12
+ * @description : 
+ * @target : 
+==============================================================
+ * Ver          Date            Author          Modification
+ * 1.0          2024-06-12      th.kim          Initial Version
+**************************************************************/
+.chat-window {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #d8dde6;
+    padding: 10px;
+    margin-bottom: 10px;
+}
